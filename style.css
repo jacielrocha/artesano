@@ -5,6 +5,16 @@
     margin: 0;
 }
 
+:root{
+  --white:#fff;
+  --black:#000;
+  --cinza-1:#6a6a6a;
+  --cinza-2:#1f2124;
+  --cinza-3:#3a3d41;
+  --cinza-claro:#f4f4f5;
+
+}
+
 body, html {
     min-height: 100%;
 }
@@ -14,7 +24,7 @@ body, html {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #fff;
+  color: var(--white);
   position: relative;
   width: 100%;
   height: 50%;
@@ -54,7 +64,7 @@ body, html {
 
 #hero h2::before, #hero h2::after {
   content: "";
-  border-top: 2px solid #fff;
+  border-top: 2px solid var(--white);
   width: 50px;
   display: flex;;
 }
@@ -90,7 +100,7 @@ body, html {
   padding: 10px;
   position: sticky;
   top: 0;
-  background-color: #f4f4f5;
+  background-color: var(--cinza-claro);
 }
 
 .menu-list{
@@ -116,7 +126,7 @@ gap: 15px;
 
 #menu-logo a {
   display: block;
-  border: 1px solid #000;
+  border: 1px solid var(--black);
   padding: 8px 10px;
   text-align: center;
   color: #000;
@@ -124,17 +134,17 @@ gap: 15px;
 }
 
 #menu-logo a:hover {
-  color: #6a6a6a;
+  color: var(--cinza-1);
   border-color: #6a6a6a;
 }
 
 section.light {
-  background-color: #f4f4f5;
+  background-color: var(--cinza-claro);
   color: #1f2124;
 }
 
 section.dark {
-  background-color: #1f2124;
+  background-color: var(--cinza-2);
   color: #f4f4f5;
 }
 
@@ -200,8 +210,8 @@ section .section-title {
 #colecoes table th, #colecoes table td {
   text-align: left;
   padding: 25px;
-  border-top: 1px solid #3a3d41;
-  border-bottom: 1px solid #3a3d41;
+  border-top: 1px solid var(--cinza-3);
+  border-bottom: 1px solid var(--cinza-3);
 }
 
 #colecoes p {
@@ -212,8 +222,8 @@ section .section-title {
 
 #colecoes a {
   text-decoration: none;
-  color: #f4f4f5;
-  border: 1px solid #f4f4f5;
+  color: var(--cinza-claro);
+  border: 1px solid var(--cinza-claro);
   border-radius: 50px;
   padding: 15px 40px;
   font-size: 24px;
@@ -266,4 +276,19 @@ form .input-recado label {
 form .input-recado textarea {
   width: 100%;
   height: 150px;
+}
+
+.manu-mobile {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .menu-item#menu-logo {
+    display: block;
+  }
 }
